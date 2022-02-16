@@ -349,7 +349,7 @@ dirction.forEach(function(i){
 
 // }
 // })
-i.addEventListener("click",function(e){
+i.addEventListener("mousedown",function(e){
     let id = e.target.dataset.id
   
     switch(id){
@@ -358,14 +358,14 @@ i.addEventListener("click",function(e){
             if(player.position.x <=0){
 
             }else{
-                player.position.x += -10
+                player.position.x += -12
             }
             break;
         case  'right' :
          if(player.position.x >= canvas.width - player.width){
 
          }else{
-            player.position.x += 10
+            player.position.x += 12
          }
             break;
     
