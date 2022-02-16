@@ -22,7 +22,7 @@ window.onresize = Game
 
 Game=function  (){
   
-    let timer = 120;
+    let timer = 100;
     let animationId;
     canvas.width = window.innerWidth ;
     canvas.height = window.innerHeight ;   
@@ -335,29 +335,38 @@ addEventListener("keyup",function({keyCode}){
 // addEventListener("mousedown")ss
 
 dirction.forEach(function(i){
-i.addEventListener("mouseenter",function(e){
+// i.addEventListener("mouseenter",function(e){
 
-let id = e.target.dataset.id
+// let id = e.target.dataset.id
 
-switch(id){
-    case 'left' :
-        keys.left.pressed = true
-        break;
-    case  'right' :
-        keys.right.pressed = true
-        break;
+// switch(id){
+//     case 'left' :
+//         keys.left.pressed = true
+//         break;
+//     case  'right' :
+//         keys.right.pressed = true
+//         break;
 
-}
-})
-i.addEventListener("mouseleave",function(e){
+// }
+// })
+i.addEventListener("click",function(e){
     let id = e.target.dataset.id
   
     switch(id){
         case 'left' :
-            keys.left.pressed = false
+            
+            if(player.position.x <=0){
+
+            }else{
+                player.position.x += -10
+            }
             break;
         case  'right' :
-            keys.right.pressed = false
+         if(player.position.x >= canvas.width - player.width){
+
+         }else{
+            player.position.x += 10
+         }
             break;
     
     }
@@ -394,9 +403,6 @@ timers()
 
 }
 start.onclick = StartGame
-
-
-
 
 }
 Game()
