@@ -384,7 +384,7 @@ StartGame= function (){
 
     scorenum = 0
     scorenumth = 0
-    timer = 10
+    timer = 100
 titleScore.style.display ='none'
 info.style.display ='none';
 timerEL.textContent = timer
