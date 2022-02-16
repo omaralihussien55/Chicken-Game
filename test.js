@@ -349,7 +349,8 @@ dirction.forEach(function(i){
 
 // }
 // })
-i.addEventListener("mousedown",function(e){
+
+i.addEventListener("mousemove",function(e){
     let id = e.target.dataset.id
   
     switch(id){
